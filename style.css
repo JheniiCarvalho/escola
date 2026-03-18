@@ -1,90 +1,294 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola Horizonte Azul | Educação e Confiança</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- Definição da Paleta Azul --- */
+:root {
+    /* Tons de Azul */
+    --azul-escuro: #0a3d62;    /* Header, Títulos fortes, Botões no hover */
+    --azul-principal: #3c6382; /* Cor principal, Botões, Destaques */
+    --azul-claro: #82ccdd;    /* Detalhes, Links no hover, Fundo suave */
+    --azul-fundo: #f0f8ff;     /* Fundo da página (AliceBlue) */
+    
+    /* Outras cores */
+    --branco: #ffffff;
+    --texto: #333333;
+    --texto-suave: #666666;
+    --borda: #cccccc;
+    
+    /* Fontes e Transições */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicao: all 0.3s ease;
+}
 
-    <header>
-        <div class="logo">Escola Horizonte</div>
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#estrutura">Estrutura</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+/* --- Reset e Estilos Básicos --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Educação que ilumina o futuro.</h1>
-            <p>Um ambiente azul de aprendizado, inovação e acolhimento.</p>
-            <a href="#contato" class="btn-principal">Matrículas Aberta</a>
-        </div>
-    </section>
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--azul-fundo); /* Fundo azul bem suave */
+    color: var(--texto);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Rolagem suave nativa */
+}
 
-    <section id="estrutura" class="info-section">
-        <h2>Nossa Estrutura</h2>
-        <div class="cards-container">
-            <div class="card">
-                <h3>Laboratórios Modernos</h3>
-                <p>Equipamentos de ponta para ciências e robótica.</p>
-            </div>
-            <div class="card">
-                <h3>Biblioteca Completa</h3>
-                <p>Um vasto acervo para incentivar a leitura.</p>
-            </div>
-            <div class="card">
-                <h3>Quadras Esportivas</h3>
-                <p>Espaço para o desenvolvimento físico e trabalho em equipe.</p>
-            </div>
-        </div>
-    </section>
+h1, h2, h3 {
+    color: var(--azul-escuro);
+    margin-bottom: 1rem;
+}
 
-    <section id="galeria" class="galeria-section">
-        <h2>Conheça nossa Escola</h2>
-        <div class="galeria-grid">
-            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400&auto=format&fit=crop" alt="Alunos na sala de aula" class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1510531704581-5b2870f30060?q=80&w=400&auto=format&fit=crop" alt="Pátio da escola" class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=400&auto=format&fit=crop" alt="Professor explicando" class="galeria-item">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400&auto=format&fit=crop" alt="Laboratório de informática" class="galeria-item">
-        </div>
-    </section>
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-    <section id="contato" class="contato-container">
-        <h2>Fale Conosco</h2>
-        <form id="form-contato">
-            <div class="form-group">
-                <label for="nome">Nome do Responsável:</label>
-                <input type="text" id="nome" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem (Opcional):</label>
-                <textarea id="mensagem" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn-enviar">Solicitar Informações</button>
-        </form>
-    </section>
+/* --- Header --- */
+header {
+    background-color: var(--azul-escuro); /* Header azul escuro */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
 
-    <footer>
-        <p>&copy; 2026 Escola Horizonte Azul. Todos os direitos reservados.</p>
-        <p>Rua da Educação, 123 - Curitiba, PR</p>
-    </footer>
+.logo {
+    color: var(--branco);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+.nav-menu a:hover {
+    color: var(--azul-claro); /* Hover azul claro */
+}
+
+/* Menu Mobile (Hamburger) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--branco);
+    transition: var(--transicao);
+}
+
+/* --- Seção Hero --- */
+.hero {
+    height: 80vh;
+    /* Imagem de fundo com overlay azul escuro */
+    background: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), 
+                url('https://images.unsplash.com/photo-1523050335392-9ae86eb17e05?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--branco);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    color: var(--branco);
+    font-size: 3.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    background-color: var(--azul-claro); /* Botão azul claro */
+    color: var(--azul-escuro);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: var(--transicao);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-principal:hover {
+    background-color: var(--branco);
+    transform: translateY(-3px);
+}
+
+/* --- Cartões de Informação --- */
+.info-section {
+    padding: 50px 5%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 5px solid var(--azul-principal); /* Detalhe em azul */
+    transition: var(--transicao);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(10, 61, 98, 0.1);
+}
+
+/* --- Galeria de Fotos --- */
+.galeria-section {
+    padding: 50px 5%;
+    background-color: var(--branco);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.galeria-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transicao);
+    border: 3px solid transparent;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    border-color: var(--azul-principal); /* Borda azul no hover */
+}
+
+/* --- Formulário de Contato --- */
+.contato-container {
+    padding: 50px 5%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(10, 61, 98, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--azul-escuro);
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: var(--transicao);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--azul-principal); /* Borda azul no foco */
+    background-color: var(--branco);
+}
+
+.btn-enviar {
+    background-color: var(--azul-principal); /* Botão azul */
+    color: var(--branco);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transicao);
+}
+
+.btn-enviar:hover {
+    background-color: var(--azul-escuro);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 5%;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* --- Responsividade (Mobile) --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    
+    .nav-menu {
+        display: none; /* Esconde o menu normal */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--azul-escuro);
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-menu.active {
+        display: block; /* Mostra o menu quando ativo */
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .menu-toggle {
+        display: block; /* Mostra o botão hamburger */
+    }
+}
