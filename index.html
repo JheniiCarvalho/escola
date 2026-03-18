@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Estadual São Cristóvão</title>
+    <title>Escola Horizonte Azul | Educação e Confiança</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="main-header">
-        <div class="logo">CE São Cristóvão</div>
-        <nav>
-            <ul class="nav-menu">
+    <header>
+        <div class="logo">Escola Horizonte</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#ensino">Ensino</a></li>
+                <li><a href="#estrutura">Estrutura</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -21,38 +26,64 @@
     </header>
 
     <section id="inicio" class="hero">
-        <h1>Colégio Estadual São Cristóvão</h1>
-        <p>Educação pública de qualidade e compromisso com o futuro.</p>
-        <a href="#contato" class="btn">Fale Conosco</a>
+        <div class="hero-content">
+            <h1>Educação que ilumina o futuro.</h1>
+            <p>Um ambiente azul de aprendizado, inovação e acolhimento.</p>
+            <a href="#contato" class="btn-principal">Matrículas Aberta</a>
+        </div>
     </section>
 
-    <section id="galeria" class="container">
-        <h2 class="section-title">Nossa Estrutura</h2>
+    <section id="estrutura" class="info-section">
+        <h2>Nossa Estrutura</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Laboratórios Modernos</h3>
+                <p>Equipamentos de ponta para ciências e robótica.</p>
+            </div>
+            <div class="card">
+                <h3>Biblioteca Completa</h3>
+                <p>Um vasto acervo para incentivar a leitura.</p>
+            </div>
+            <div class="card">
+                <h3>Quadras Esportivas</h3>
+                <p>Espaço para o desenvolvimento físico e trabalho em equipe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria-section">
+        <h2>Conheça nossa Escola</h2>
         <div class="galeria-grid">
-            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" alt="Sala de aula" class="zoom-img">
-            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?w=500" alt="Biblioteca" class="zoom-img">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500" alt="Laboratório" class="zoom-img">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=400&auto=format&fit=crop" alt="Alunos na sala de aula" class="galeria-item">
+            <img src="https://images.unsplash.com/photo-1510531704581-5b2870f30060?q=80&w=400&auto=format&fit=crop" alt="Pátio da escola" class="galeria-item">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=400&auto=format&fit=crop" alt="Professor explicando" class="galeria-item">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400&auto=format&fit=crop" alt="Laboratório de informática" class="galeria-item">
         </div>
     </section>
 
     <section id="contato" class="contato-container">
-        <h2>Secretaria Virtual</h2>
+        <h2>Fale Conosco</h2>
         <form id="form-contato">
-            <input type="text" id="nome" placeholder="Seu Nome Completo" required>
-            <input type="email" id="email" placeholder="Seu E-mail" required>
-            <textarea id="mensagem" placeholder="Como podemos ajudar?" rows="4"></textarea>
-            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+            <div class="form-group">
+                <label for="nome">Nome do Responsável:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem (Opcional):</label>
+                <textarea id="mensagem" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Solicitar Informações</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2026 Colégio Estadual São Cristóvão | Secretaria da Educação</p>
+        <p>&copy; 2026 Escola Horizonte Azul. Todos os direitos reservados.</p>
+        <p>Rua da Educação, 123 - Curitiba, PR</p>
     </footer>
-
-    <div id="modal" class="modal">
-        <span class="fechar">&times;</span>
-        <img class="modal-conteudo" id="img-modal">
-    </div>
 
     <script src="script.js"></script>
 </body>
