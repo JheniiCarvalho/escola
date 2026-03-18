@@ -1,294 +1,113 @@
-/* --- Definição da Paleta Azul --- */
+/* Variáveis para facilitar a troca de cores da escola */
 :root {
-    /* Tons de Azul */
-    --azul-escuro: #0a3d62;    /* Header, Títulos fortes, Botões no hover */
-    --azul-principal: #3c6382; /* Cor principal, Botões, Destaques */
-    --azul-claro: #82ccdd;    /* Detalhes, Links no hover, Fundo suave */
-    --azul-fundo: #f0f8ff;     /* Fundo da página (AliceBlue) */
-    
-    /* Outras cores */
+    --primaria: #1a5f7a;
+    --secundaria: #ffcc00;
+    --texto: #333;
     --branco: #ffffff;
-    --texto: #333333;
-    --texto-suave: #666666;
-    --borda: #cccccc;
-    
-    /* Fontes e Transições */
-    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --transicao: all 0.3s ease;
+    --suave: #f4f7f6;
 }
 
-/* --- Reset e Estilos Básicos --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: var(--fonte-principal);
-    background-color: var(--azul-fundo); /* Fundo azul bem suave */
+    background-color: var(--suave);
     color: var(--texto);
     line-height: 1.6;
-    scroll-behavior: smooth; /* Rolagem suave nativa */
 }
 
-h1, h2, h3 {
-    color: var(--azul-escuro);
-    margin-bottom: 1rem;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* --- Header --- */
+/* Header & Menu */
 header {
-    background-color: var(--azul-escuro); /* Header azul escuro */
+    background: var(--primaria);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .logo {
     color: var(--branco);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.nav-menu ul {
+.nav-menu {
     list-style: none;
     display: flex;
 }
 
 .nav-menu li {
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 .nav-menu a {
     color: var(--branco);
     text-decoration: none;
-    font-weight: 500;
-    transition: var(--transicao);
+    transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    color: var(--azul-claro); /* Hover azul claro */
+    color: var(--secundaria);
 }
 
-/* Menu Mobile (Hamburger) */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--branco);
-    transition: var(--transicao);
-}
-
-/* --- Seção Hero --- */
+/* Seção Hero */
 .hero {
-    height: 80vh;
-    /* Imagem de fundo com overlay azul escuro */
-    background: linear-gradient(rgba(10, 61, 98, 0.7), rgba(10, 61, 98, 0.7)), 
-                url('https://images.unsplash.com/photo-1523050335392-9ae86eb17e05?q=80&w=1470&auto=format&fit=crop') no-repeat center center/cover;
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1471&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--branco);
-    padding: 0 20px;
+    color: white;
 }
 
-.hero h1 {
-    color: var(--branco);
-    font-size: 3.5rem;
-}
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-principal {
-    background-color: var(--azul-claro); /* Botão azul claro */
-    color: var(--azul-escuro);
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: var(--transicao);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.btn-principal:hover {
-    background-color: var(--branco);
-    transform: translateY(-3px);
-}
-
-/* --- Cartões de Informação --- */
-.info-section {
+/* Formulário de Contato */
+.contato-container {
     padding: 50px 5%;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background-color: var(--branco);
-    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--branco);
     border-radius: 10px;
-    border-bottom: 5px solid var(--azul-principal); /* Detalhe em azul */
-    transition: var(--transicao);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(10, 61, 98, 0.1);
-}
-
-/* --- Galeria de Fotos --- */
-.galeria-section {
-    padding: 50px 5%;
-    background-color: var(--branco);
-}
-
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.galeria-item {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transicao);
-    border: 3px solid transparent;
-}
-
-.galeria-item:hover {
-    transform: scale(1.05);
-    border-color: var(--azul-principal); /* Borda azul no hover */
-}
-
-/* --- Formulário de Contato --- */
-.contato-container {
-    padding: 50px 5%;
-    max-width: 700px;
-    margin: 50px auto;
-    background-color: var(--branco);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(10, 61, 98, 0.1);
-}
-
 .form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--azul-escuro);
-    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 15px;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: var(--transicao);
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--azul-principal); /* Borda azul no foco */
-    background-color: var(--branco);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
 }
 
 .btn-enviar {
-    background-color: var(--azul-principal); /* Botão azul */
-    color: var(--branco);
+    background: var(--primaria);
+    color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
+    padding: 12px 25px;
     cursor: pointer;
+    border-radius: 5px;
     width: 100%;
-    transition: var(--transicao);
+    font-size: 1rem;
 }
 
 .btn-enviar:hover {
-    background-color: var(--azul-escuro);
-}
-
-/* --- Footer --- */
-footer {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-    text-align: center;
-    padding: 40px 5%;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-
-/* --- Responsividade (Mobile) --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    
-    .nav-menu {
-        display: none; /* Esconde o menu normal */
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: var(--azul-escuro);
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-menu.active {
-        display: block; /* Mostra o menu quando ativo */
-    }
-    
-    .nav-menu ul {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-    }
-    
-    .menu-toggle {
-        display: block; /* Mostra o botão hamburger */
-    }
+    background: #13455a;
 }
