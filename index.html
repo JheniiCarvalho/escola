@@ -1,20 +1,99 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE São Cristóvão | Excelência em Educar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <i class="ph ph-graduation-cap"></i>
+                <span>CE São Cristóvão</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato" class="nav-btn">Contato</a></li>
+            </ul>
+            <button class="mobile-menu"><i class="ph ph-list"></i></button>
+        </nav>
+    </header>
 
-<section id="contato" class="container">
-    <h2>Entre em Contato</h2>
-    <div class="contato-wrapper">
-        <div class="info-contato">
-            <p>📍 Av. Principal, São Cristóvão - PR</p>
-            <p>📞 (41) 0000-0000</p>
-            <p>✉️ contato@escola.pr.gov.br</p>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <span class="tagline">Educação Pública de Qualidade</span>
+                <h1>Construindo o futuro hoje.</h1>
+                <p>No Colégio Estadual São Cristóvão, unimos tradição e inovação para preparar nossos alunos para os desafios do mundo real.</p>
+                <div class="hero-btns">
+                    <a href="#cursos" class="btn btn-primary">Ver Modalidades</a>
+                    <a href="#sobre" class="btn btn-secondary">Conheça o Colégio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="features container">
+            <div class="feature-card">
+                <i class="ph ph-users-three"></i>
+                <h3>Comunidade</h3>
+                <p>Ambiente acolhedor focado no respeito mútuo.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-chalkboard-teacher"></i>
+                <h3>Qualificação</h3>
+                <p>Docentes especialistas e comprometidos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="ph ph-laptop"></i>
+                <h3>Inovação</h3>
+                <p>Laboratórios modernos e ensino conectado.</p>
+            </div>
+        </section>
+
+        <section id="cursos" class="courses container">
+            <div class="section-title">
+                <h2>Nossas Modalidades</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="grid-cursos">
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-book-open"></i></div>
+                    <h3>Ensino Fundamental</h3>
+                    <p>Desenvolvimento cognitivo e social para os anos finais.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-student"></i></div>
+                    <h3>Ensino Médio</h3>
+                    <p>Foco no ENEM, vestibulares e formação cidadã.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="ph ph-briefcase"></i></div>
+                    <h3>Cursos Técnicos</h3>
+                    <p>Profissionalização rápida para o mercado de trabalho.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h4>CE São Cristóvão</h4>
+                <p>Paraná, Brasil - 2026</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            </div>
         </div>
-        <form class="form-contato">
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu E-mail" required>
-            <textarea placeholder="Sua Mensagem"></textarea>
-            <button type="submit" class="btn">Enviar</button>
-        </form>
-    </div>
-</section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
