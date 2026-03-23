@@ -1,53 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colégio Estadual São Cristóvão</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">CE São Cristóvão</div>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
 
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h1 id="boas-vindas">Bem-vindo ao Colégio Estadual São Cristóvão</h1>
-            <p>Transformando vidas através da educação.</p>
-            <a href="#cursos" class="btn">Conheça nossos cursos</a>
+<section id="contato" class="container">
+    <h2>Entre em Contato</h2>
+    <div class="contato-wrapper">
+        <div class="info-contato">
+            <p>📍 Av. Principal, São Cristóvão - PR</p>
+            <p>📞 (41) 0000-0000</p>
+            <p>✉️ contato@escola.pr.gov.br</p>
         </div>
-    </section>
-
-    <section id="cursos" class="container">
-        <h2>Nossas Modalidades</h2>
-        <div class="grid-cursos">
-            <div class="card">
-                <h3>Ensino Fundamental</h3>
-                <p>Anos finais com foco no desenvolvimento integral do aluno.</p>
-            </div>
-            <div class="card">
-                <h3>Ensino Médio</h3>
-                <p>Preparação sólida para o vestibular e mercado de trabalho.</p>
-            </div>
-            <div class="card">
-                <h3>Cursos Técnicos</h3>
-                <p>Formação profissionalizante em diversas áreas.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Colégio Estadual São Cristóvão - Paraná</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <form class="form-contato">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Sua Mensagem"></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</section>
