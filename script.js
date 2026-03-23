@@ -1,16 +1,27 @@
-// Altera a saudação conforme o horário do dia
-document.addEventListener("DOMContentLoaded", function() {
-    const titulo = document.getElementById("boas-vindas");
-    const hora = new Date().getHours();
-    let saudacao = "";
+// Efeito de Revelar ao Rolar (Scroll Reveal)
+const observerOptions = {
+    threshold: 0.1
+};
 
-    if (hora < 12) {
-        saudacao = "Bom dia!";
-    } else if (hora < 18) {
-        saudacao = "Boa tarde!";
-    } else {
-        saudacao = "Boa noite!";
-    }
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, observerOptions);
 
-    titulo.innerText = `${saudacao} Bem-vindo ao Colégio Estadual São Cristóvão`;
+document.querySelectorAll('.card').forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+    card.style.transition = "all 0.6s ease-out";
+    observer.observe(card);
+});
+
+// Validação simples de formulário
+document.querySelector('.form-contato')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Obrigado! Sua mensagem foi enviada com sucesso (simulação).');
+    e.target.reset();
 });
