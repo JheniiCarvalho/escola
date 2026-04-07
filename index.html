@@ -3,74 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola São Cristóvão</title>
+    <title>Escola São Cristóvão | Excelência em Educação</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">São Cristóvão</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <nav class="container-nav">
+            <div class="logo">
+                <span class="icon-book">📚</span> São Cristóvão
             </div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Nossa História</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#contato">Matrículas</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Educação que Transforma Caminhos</h1>
-            <p>Matrículas abertas para o ano letivo de 2026. Venha fazer parte da nossa história.</p>
-            <a href="#contato" class="btn">Saiba Mais</a>
-        </div>
-    </section>
-
-    <section id="sobre" class="container">
-        <h2>Sobre a Escola</h2>
-        <p>A Escola São Cristóvão dedica-se há mais de 20 anos ao desenvolvimento integral dos alunos, unindo tradição, tecnologia e valores humanos para preparar cidadãos conscientes para o futuro.</p>
-    </section>
-
-    <section id="cursos" class="bg-light">
-        <div class="container">
-            <h2>Nossos Diferenciais</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Ensino Infantil</h3>
-                    <p>Ambiente lúdico e seguro focado no desenvolvimento motor e social.</p>
-                </div>
-                <div class="card">
-                    <h3>Ensino Fundamental</h3>
-                    <p>Base sólida de conhecimentos com suporte pedagógico personalizado.</p>
-                </div>
-                <div class="card">
-                    <h3>Ensino Médio</h3>
-                    <p>Foco total em resultados acadêmicos e preparação para vestibulares.</p>
-                </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Educação Que <br><span class="highlight">Ilumina Caminhos</span></h1>
+            <p>Formando líderes e cidadãos conscientes através de uma pedagogia inovadora e humanista. Prepare seu filho para o futuro.</p>
+            <div class="hero-btns">
+                <a href="#contato" class="btn btn-primary">Agendar Visita</a>
+                <a href="#sobre" class="btn btn-secondary">Conheça Mais</a>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="container">
-        <h2>Fale Conosco</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Nome Completo" required>
-            <input type="email" placeholder="Seu melhor E-mail" required>
-            <textarea placeholder="Como podemos ajudar?" rows="5" required></textarea>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
+    <section id="sobre" class="container-section">
+        <div class="sobre-grid">
+            <div class="sobre-text">
+                <span class="subtitle">Tradição & Inovação</span>
+                <h2>Semeando Conhecimento Há Décadas</h2>
+                <p>A Escola São Cristóvão não é apenas um lugar de aprendizado acadêmico, mas um espaço de crescimento integral. Combinamos métodos pedagógicos comprovados com a tecnologia moderna para criar um ambiente onde cada aluno é incentivado a atingir seu potencial máximo.</p>
+            </div>
+            <div class="sobre-image">
+                <img src="https://images.unsplash.com/photo-1577897113292-3b95936e52a6?auto=format&fit=crop&w=800&q=80" alt="Alunos na biblioteca">
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais" class="bg-light container-section">
+        <div class="text-center mb-huge">
+            <span class="subtitle">Por que nos escolher?</span>
+            <h2>Nossos Pilares de Excelência</h2>
+        </div>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>Ensino Bilíngue</h3>
+                <p>Imersão cultural e linguística desde cedo, preparando para um mundo globalizado.</p>
+            </div>
+            <div class="card active">
+                <div class="card-icon">🧠</div>
+                <h3>Formação Integral</h3>
+                <p>Desenvolvimento cognitivo, emocional e social através de projetos socioemocionais.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <h3>Tecnologia na Educação</h3>
+                <p>Laboratórios modernos e ferramentas digitais que potencializam o aprendizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Pronto Para Iniciar <br>Essa Jornada?</h2>
+                <p>Preencha o formulário e nossa equipe de admissões entrará em contato para agendar uma visita e apresentar nossa proposta pedagógica.</p>
+                <div class="info-item">📍 Av. da Educação, 1000 - Curitiba/PR</div>
+                <div class="info-item">📞 (41) 3333-4444</div>
+            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nome do Responsável" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+                </div>
+                <div class="form-group">
+                    <select id="serie">
+                        <option value="" disabled selected>Série de Interesse</option>
+                        <option value="infantil">Ensino Infantil</option>
+                        <option value="fundamental1">Fundamental I</option>
+                        <option value="fundamental2">Fundamental II</option>
+                        <option value="medio">Ensino Médio</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Solicitar Informações</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Escola São Cristóvão - Todos os direitos reservados.</p>
+        <div class="container-section text-center">
+            <div class="logo mb-small">São Cristóvão</div>
+            <p class="mb-small">Cultivando valores, construindo futuros.</p>
+            <div class="social-links">
+                <a href="#">FB</a>
+                <a href="#">IG</a>
+                <a href="#">LK</a>
+            </div>
+            <p class="copyright">&copy; 2026 Escola São Cristóvão. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
