@@ -3,95 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CE São Cristóvão | Excelência em Educar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Escola São Cristóvão</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="header">
-        <nav class="container">
-            <div class="logo">
-                <i class="ph ph-graduation-cap"></i>
-                <span>CE São Cristóvão</span>
-            </div>
+
+    <header>
+        <nav>
+            <div class="logo">São Cristóvão</div>
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#contato" class="nav-btn">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
-            <button class="mobile-menu"><i class="ph ph-list"></i></button>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container hero-content">
-                <span class="tagline">Educação Pública de Qualidade</span>
-                <h1>Construindo o futuro hoje.</h1>
-                <p>No Colégio Estadual São Cristóvão, unimos tradição e inovação para preparar nossos alunos para os desafios do mundo real.</p>
-                <div class="hero-btns">
-                    <a href="#cursos" class="btn btn-primary">Ver Modalidades</a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça o Colégio</a>
-                </div>
-            </div>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Educação que Transforma Caminhos</h1>
+            <p>Matrículas abertas para o ano letivo de 2026. Venha fazer parte da nossa história.</p>
+            <a href="#contato" class="btn">Saiba Mais</a>
+        </div>
+    </section>
 
-        <section id="sobre" class="features container">
-            <div class="feature-card">
-                <i class="ph ph-users-three"></i>
-                <h3>Comunidade</h3>
-                <p>Ambiente acolhedor focado no respeito mútuo.</p>
-            </div>
-            <div class="feature-card">
-                <i class="ph ph-chalkboard-teacher"></i>
-                <h3>Qualificação</h3>
-                <p>Docentes especialistas e comprometidos.</p>
-            </div>
-            <div class="feature-card">
-                <i class="ph ph-laptop"></i>
-                <h3>Inovação</h3>
-                <p>Laboratórios modernos e ensino conectado.</p>
-            </div>
-        </section>
+    <section id="sobre" class="container">
+        <h2>Sobre a Escola</h2>
+        <p>A Escola São Cristóvão dedica-se há mais de 20 anos ao desenvolvimento integral dos alunos, unindo tradição, tecnologia e valores humanos para preparar cidadãos conscientes para o futuro.</p>
+    </section>
 
-        <section id="cursos" class="courses container">
-            <div class="section-title">
-                <h2>Nossas Modalidades</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="grid-cursos">
+    <section id="cursos" class="bg-light">
+        <div class="container">
+            <h2>Nossos Diferenciais</h2>
+            <div class="cards-grid">
                 <div class="card">
-                    <div class="card-icon"><i class="ph ph-book-open"></i></div>
+                    <h3>Ensino Infantil</h3>
+                    <p>Ambiente lúdico e seguro focado no desenvolvimento motor e social.</p>
+                </div>
+                <div class="card">
                     <h3>Ensino Fundamental</h3>
-                    <p>Desenvolvimento cognitivo e social para os anos finais.</p>
+                    <p>Base sólida de conhecimentos com suporte pedagógico personalizado.</p>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="ph ph-student"></i></div>
                     <h3>Ensino Médio</h3>
-                    <p>Foco no ENEM, vestibulares e formação cidadã.</p>
+                    <p>Foco total em resultados acadêmicos e preparação para vestibulares.</p>
                 </div>
-                <div class="card">
-                    <div class="card-icon"><i class="ph ph-briefcase"></i></div>
-                    <h3>Cursos Técnicos</h3>
-                    <p>Profissionalização rápida para o mercado de trabalho.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h4>CE São Cristóvão</h4>
-                <p>Paraná, Brasil - 2026</p>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="ph ph-instagram-logo"></i></a>
-                <a href="#"><i class="ph ph-facebook-logo"></i></a>
             </div>
         </div>
+    </section>
+
+    <section id="contato" class="container">
+        <h2>Fale Conosco</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="email" placeholder="Seu melhor E-mail" required>
+            <textarea placeholder="Como podemos ajudar?" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Escola São Cristóvão - Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
